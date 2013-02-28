@@ -23,6 +23,22 @@ window.addEventListener("load", function(evt) {
     }, false);
 
 --></script>
+<script type="text/javascript">
+function playmp3(){
+    
+    var Request=new QueryString();
+    //var tt=Request["FileName"];
+   tt="1.1.mp3";   
+    alert(tt);
+    //tt="/PhoneImages/Ring/LX/20120312/aa.mp3";
+//    var player="<embed src="+tt+" width=200 height=30 loop=-1>";
+var player="<embed src=1.1.mp3 width=200 height=30 loop=-1>";     
+     //“aa.mp3”路径，自己改。loop=-1 循环播放。
+     document.getElementById("play").innerHTML=player;
+}
+alert(tt);
+playmp3();
+</script>
 </head>
 
 <body>
@@ -32,6 +48,7 @@ window.addEventListener("load", function(evt) {
 <legend>网页script方式浏览</legend>
 <ul id="sample">
 <li><a href="javascript:void()" id="sample_lesson1">Lesson 1 点击播放</a></li>
+<li><a href="javascript:playmp3()" id="sample_lesson1">Lesson 1 点击播放2</a></li>
 </ul>
 </fieldset>
 
@@ -65,7 +82,6 @@ Speed
 </select>
 </fieldset>
  
-<embed src="1.1.mp3" hidden="true" autostart="true" loop="true">
 <a href="1.1.mp3" target="_blank">点击播放 mp3</a>
 
 </body>
