@@ -9,12 +9,14 @@ window.addEventListener("load", function(evt) {
     vt = new VT100(80, 24, "term");
     vt.clear();
     vt.refresh();
+    vt.write(
+"\n\n\n" +
+"   欢迎使用hpcasts.com 网页展视系统\n");
     document.getElementById("stop").addEventListener("click", stop, false);
     document.getElementById("speed").addEventListener('change', set_speed, false);
     document.getElementById("fontsize").addEventListener('change', set_fontsize, false);
     document.getElementById("play").addEventListener("click", play, false);
 
-	document.getElementById("mp3").play();
     var samples = document.querySelectorAll("ul#sample>li>a[id^=\"sample_\"]");
     for (var i = 0; i < samples.length; i++) {
       samples[i].addEventListener('click', function(evt) {
