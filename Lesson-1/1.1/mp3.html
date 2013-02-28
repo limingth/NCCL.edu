@@ -28,6 +28,7 @@ window.addEventListener("load", function(evt) {
     for (var i = 0; i < samples.length; i++) {
       samples[i].addEventListener('click', function(evt) {
           play_file(evt.target.id.substr(7));
+		  sleep(6);
 		  PlaySound('1.1.mp3');
       }, false);
     }
