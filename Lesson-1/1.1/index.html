@@ -2,8 +2,8 @@
 <head>
 <title>新概念C语言 @亚嵌李明老师</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="./VT100.js" ></script>
-<script type="text/javascript" src="./scriptreplay.js" ></script>
+<script type="text/javascript" src="./term.js" ></script>
+<script type="text/javascript" src="./scriptreplay_color.js" ></script>
 <script type ="text/javascript">    
     function PlaySound(file)
     {
@@ -17,9 +17,9 @@
 </script>
 <script type="text/javascript"><!--
 window.addEventListener("load", function(evt) {
-    vt = new VT100(80, 24, "term");
-    vt.clear();
-    vt.refresh();
+    vt = new Terminal(80, 24);
+    vt.open("term");
+
     document.getElementById("stop").addEventListener("click", stop, false);
     document.getElementById("speed").addEventListener('change', set_speed, false);
     document.getElementById("fontsize").addEventListener('change', set_fontsize, false);
@@ -45,7 +45,7 @@ window.addEventListener("load", function(evt) {
 <li><a href="javascript:void()" id="sample_lesson1">点击播放</a></li>
 </ul>
 
-<tt><pre id=term></pre></tt>
+<tt><pre id=term style="width:800px"></pre></tt>
 
 <fieldset>
 <legend>play control</legend>
