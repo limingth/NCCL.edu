@@ -25,6 +25,10 @@ window.addEventListener("load", function(evt) {
     document.getElementById("fontsize").addEventListener('change', set_fontsize, false);
     document.getElementById("play").addEventListener("click", play, false);
 
+    //auto load 
+    play_file("lesson1");
+    PlaySound('1.1.mp3');
+
     var samples = document.querySelectorAll("ul#sample>li>a[id^=\"sample_\"]");
     for (var i = 0; i < samples.length; i++) {
       samples[i].addEventListener('click', function(evt) {
