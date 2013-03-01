@@ -1,67 +1,193 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
+
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Nccl.edu by limingth</title>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="新概念C语言 : New Concept C Language" />
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <script src="javascripts/scale.fix.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>新概念C语言</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1 class="header">Nccl.edu</h1>
-        <p class="header">education website for NCCL</p>
 
-        <ul>
-          <li class="download"><a class="buttons" href="https://github.com/limingth/NCCL.edu/zipball/master">Download ZIP</a></li>
-          <li class="download"><a class="buttons" href="https://github.com/limingth/NCCL.edu/tarball/master">Download TAR</a></li>
-          <li><a class="buttons github" href="https://github.com/limingth/NCCL.edu">View On GitHub</a></li>
-        </ul>
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/limingth/NCCL">View on GitHub</a>
 
-        <p class="header">This project is maintained by <a class="header name" href="https://github.com/limingth">limingth</a></p>
+          <h1 id="project_title">新概念C语言</h1>
+          <h2 id="project_tagline">New Concept C Language</h2>
 
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/limingth/NCCL/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/limingth/NCCL/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
 
-      </header>
-      <section>
-        <h3>Welcome to GitHub Pages.</h3>
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>新概念C语言</h1>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<h2>NCCL - New Concept C Language</h2>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>这是一本适合C语言零基础，但对C编程有强烈兴趣，想探求其奥秘和精髓的学员阅读学习的书。</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<p>起名为《新概念C语言》是希望借鉴《新概念英语》教材的写法，不着重强调语法和词汇(知识点)，而是以范文和场景(应用)来构建课程(Lesson)。</p>
 
-<h3>Designer Templates</h3>
+<p>全书分为 4个 Unit，每个 Unit 包含 24 个 Lesson，一共 96 个 Lesson。</p>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>其中每个 Lesson 对应一段可编译执行的典型代码，解决一个有趣的计算机问题，例如约瑟夫环。</p>
 
-<h3>Rather Drive Stick?</h3>
+<p>这些代码范例的编写，作者将力求做到句法经典，内涵丰富，适合初学者模仿和扩展。</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>全书内容大纲如下：</p>
 
-<h3>Authors and Contributors</h3>
+<ul>
+<li><a href="https://github.com/limingth/NCCL/blob/master/Unit-1/README.md">Unit 1 ： C Foundmentals</a><br>
+覆盖基本C语法结构--变量，表达式，语句，数组，结构体，位操作，指针等</li><br>
+<li>Unit 2 ： C Essentials<br>
+覆盖常用算法和数据结构--递归，链表，队列，栈，二叉树，排序查找，压缩算法，库函数等<</li><br>
+<li>Unit 3 ： C Classicals<br>
+覆盖经典计算机问题的解法--汉诺塔，迷宫，八皇后，表达式求值等</li><br>
+<li>Unit 4 ： C Compiler<br>
+用C语言实现一个类C语言的编译器，最后能够编译生成 ARM 开发板上的二进制驱动程序。</li><br>
+</ul>
+<p>(作者注: 目前仅完成 Unit 1 部分，希望能够有更多优秀的老师参与编写，请和我联系。)</p>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<h2>Unit One</h2>
 
-<h3>Support or Contact</h3>
+<ul>
+<li>Lesson 1    What is a simplest C program? 最简单的C程序</li>
+<li>Lesson 2    Let's say hello to world 打印输出</li>
+<li>Lesson 3    Count how many fingers do you have? 循环打印</li>
+<li>Lesson 4    Judge a number odd or even 判断奇偶</li>
+<li>Lesson 5    Summarize all numbers from 1 to 100 从1加到100求和</li>
+<li>Lesson 6    Print 9*9 multiplication table 乘法表</li>
+<li>Lesson 7    Find a max prime number within 100 求100以内的最大素数</li>
+<li>Lesson 8    Convert a number to a string 整型转字符串</li>
+<li>Lesson 9    Josephus ring 约瑟夫环</li>
+<li>Lesson 10    Calculate the distance between 2 point 求两个坐标点之间的距离</li>
+<li>Lesson 11    Does your machine use little-endian? 判断机器存储是否小尾端</li>
+<li>Lesson 12    Find how many 9 in number 1 to 100 1到100有多少个9</li>
+<li>Lesson 13    Sorry, your car is restricted today 对不起，你的车今天限行</li>
+<li>Lesson 14    Is there a way out? 判断地图上某点是否有出路</li>
+<li>Lesson 15    Count how many bit 1 in a number 统计一个数二进制表示中1的个数</li>
+<li>Lesson 16    Bit-Field 位域操作</li>
+<li>Lesson 17    How to strcpy 字符串拷贝</li>
+<li>Lesson 18    Find how many words in an artitle 统计一个文本中的单词个数</li>
+<li>Lesson 19    Shell command parser 命令解释器</li>
+<li>Lesson 20    RECTANGULAR and POLAR直角坐标和极坐标互换</li>
+<li>Lesson 21    Is this number a float? 浮点数判别</li>
+<li>Lesson 22    Guess what number in my hand 猜数游戏</li>
+<li>Lesson 23    Five-Chess game 五子棋</li>
+<li>Lesson 24    Build a simple Search Engenine 简单搜索引擎</li>
+</ul><h2>Unit Two</h2>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<ul>
+<li>Lesson 25    正在规划中</li>
+<li>Lesson 26<br>
+</li>
+<li>Lesson 27<br>
+</li>
+<li>Lesson 28<br>
+</li>
+<li>Lesson 29 </li>
+<li>Lesson 30 </li>
+<li>Lesson 31 </li>
+<li>Lesson 32 </li>
+<li>Lesson 33 </li>
+<li>Lesson 34 </li>
+<li>Lesson 35 </li>
+<li>Lesson 36 </li>
+<li>Lesson 37 </li>
+<li>Lesson 38 </li>
+<li>Lesson 39 </li>
+<li>Lesson 40 </li>
+<li>Lesson 41 </li>
+<li>Lesson 42 </li>
+<li>Lesson 43 </li>
+<li>Lesson 44 </li>
+<li>Lesson 45 </li>
+<li>Lesson 46 </li>
+<li>Lesson 47 </li>
+<li>Lesson 48 </li>
+</ul><h2>Unit Three</h2>
+
+<ul>
+<li>Lesson 49<br>
+</li>
+<li>Lesson 50<br>
+</li>
+<li>Lesson 51<br>
+</li>
+<li>Lesson 52<br>
+</li>
+<li>Lesson 53<br>
+</li>
+<li>Lesson 54 </li>
+<li>Lesson 55 </li>
+<li>Lesson 56 </li>
+<li>Lesson 57 </li>
+<li>Lesson 58 </li>
+<li>Lesson 59 </li>
+<li>Lesson 60 </li>
+<li>Lesson 61 </li>
+<li>Lesson 62 </li>
+<li>Lesson 63 </li>
+<li>Lesson 64 </li>
+<li>Lesson 65 </li>
+<li>Lesson 66 </li>
+<li>Lesson 67 </li>
+<li>Lesson 68 </li>
+<li>Lesson 69 </li>
+<li>Lesson 70 </li>
+<li>Lesson 71 </li>
+<li>Lesson 72 </li>
+</ul><h2>Unit Four</h2>
+
+<ul>
+<li>Lesson 73 </li>
+<li>Lesson 74 </li>
+<li>Lesson 75 </li>
+<li>Lesson 76 </li>
+<li>Lesson 77 </li>
+<li>Lesson 78 </li>
+<li>Lesson 79 </li>
+<li>Lesson 80 </li>
+<li>Lesson 81 </li>
+<li>Lesson 82 </li>
+<li>Lesson 83 </li>
+<li>Lesson 84 </li>
+<li>Lesson 85 </li>
+<li>Lesson 86 </li>
+<li>Lesson 87 </li>
+<li>Lesson 88 </li>
+<li>Lesson 89 </li>
+<li>Lesson 90 </li>
+<li>Lesson 91 </li>
+<li>Lesson 92 </li>
+<li>Lesson 93 </li>
+<li>Lesson 94 </li>
+<li>Lesson 95 </li>
+<li>Lesson 96 </li>
+</ul>
       </section>
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">新概念C语言 maintained by <a href="https://github.com/limingth">limingth</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
-		
+
+    
+
   </body>
 </html>
