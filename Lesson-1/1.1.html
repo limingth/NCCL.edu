@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+   <head>
+      <!-- saved from url=(0025)http://www.techsmith.com/ -->
+      <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+      <meta name="Author Email" content="limingth@gmail.com" />
+        <meta name="Author Homepage" content="www.lumit.org" />
+        <meta name="DC.creator" content="Li Ming" />
+        <meta name="DC.contributor" content="limingth" />
+        <meta name="DC.publisher" content="AKAEDU" />
+        <meta name="DC.rights" content="AKAEDU" />
+        <meta name="DC.title" content="1.1" />
+        <meta name="DC.date" content="2013-03-24 10:50:05 上午" />
+        <meta name="DC.language" content="ENU" />
+		
+      <title>Created by Camtasia Studio 7</title>
+      
+      <script type="text/javascript"">
+function OnLoad()
+{
+	   vid = document.getElementById( "video1" );
+   addEvent( vid, "click", divClickHandler );
+}
+
+   var toc1     = null;
+   var toc2     = null;
+   var vid      = null;
+     
+   //adds and event listener across major browser versions
+   function addEvent( obj, type, fn )
+   {
+	   if ( obj.addEventListener )
+	   {
+		   obj.addEventListener( type, fn, true );
+	   }
+	   else if ( obj.attachEvent )
+	   {
+		   obj.attachEvent( "on" + type, fn );
+	   }
+	   else
+	   {
+		   obj["on" + type] = fn;
+	   }
+   }
+
+   //removes event listeners across major browser versions
+   function removeEvent( obj, type, fn )
+   {
+      if ( obj.removeEventListener )
+	   {
+	      obj.removeEventListener( type, fn, true );	
+	   }
+	   else if ( obj.detachEvent )
+	   {
+	     obj.detachEvent( "on" + type, fn );
+	   }
+	   else
+	   {
+		   delete obj["on" + type];	
+	   }
+   }
+   
+   function divClickHandler()
+   {
+      SwitchPlayer( "video1", "video2", "1.1.avi", "800", "645", "./", "./", "mediaPlayer", "application/x-oleobject", "CLSID:6BF52A52-394A-11d3-B153-00C04F79FAA6", "http://activex.microsoft.com/activex/controls/mplayer/en/nsmp2inf.cab#Version=5,1,52,701", "Loading Microsoft Windows Media Player components...", "EmbedmediaPlayer", "false", "true", "full", toc1, toc2 );
+      
+      removeEvent( vid, 'click', divClickHandler );
+   } 
+	  </script>      
+	  
+      <script type="text/javascript">
+	  
+	     function SwitchPlayer( elementId, styleId, VideoFileName, VideoWidth, VideoHeight, MediaDirectory, MediaDirectoryNotEscaped, ObjectIDName, ObjectType, ObjectClassID, ObjectCodebase, ObjectStandBy, EmbedName, ParamLoop, ParamAutoStart, ParamUiMode, toc1, toc2 )
+   {        
+      var n = (typeof elementId == 'string') ? document.getElementById( elementId ) : elementId;
+      n.innerHTML = getWMVHTML( styleId, VideoFileName, VideoWidth, VideoHeight, MediaDirectory, MediaDirectoryNotEscaped, ObjectIDName, ObjectType, ObjectClassID, ObjectCodebase, ObjectStandBy, EmbedName, ParamLoop, ParamAutoStart, ParamUiMode, toc1, toc2 );
+      return true;
+   }  
+   
+   function getWMVHTML( divId, VideoFileName, VideoWidth, VideoHeight, MediaDirectory, MediaDirectoryNotEscaped, ObjectIDName, ObjectType, ObjectClassID, ObjectCodebase, ObjectStandBy, EmbedName, ParamLoop, ParamAutoStart, ParamUiMode, toc1, toc2 ) 
+   {
+      if ( toc1 == undefined || toc1 == null )
+		{
+			toc1 = "";
+		}
+		
+		if ( toc2 == undefined || toc2 == null )
+		{
+		   toc2 = "";	
+		}
+		
+      var node = "";
+
+      var videosubdirectory = MediaDirectoryNotEscaped;
+      var videofile = VideoFileName;
+      //this will be the final video link (absolute path)
+      var videolink = location.href;
+
+      //remove the file:// because windows media doesn't understand that
+      var file = videolink.indexOf( "file://");
+
+      if ( file > -1 )
+      {
+         // THIS IS A LOCAL PATH
+         videolink = videolink.substring( file + 8 );
+
+         //remove the %20 because media player doesn't understand those
+         while( videolink.lastIndexOf( "%20" ) != -1 )
+         {
+            videolink = videolink.replace( "%20", " " );
+         }
+
+         //remove the html file name now
+         var lastslash = videolink.lastIndexOf( "/");
+
+         if ( lastslash > -1 )
+            videolink = videolink.substring( 0, lastslash );
+
+         //add the subfolder (if there is one) and then the video file name
+         if ( videosubdirectory.length > 0 )
+            videolink = videolink + "/" + videosubdirectory + videofile;
+         else
+            videolink = videolink + "/" + videofile;
+      }
+      else
+      {
+         if ( videosubdirectory.length > 0 )
+            videolink = videosubdirectory + videofile;
+         else
+            videolink = videofile;
+      }
+            
+      node = '<div id="' + divId + '">' 
+           + toc1
+           + '   <object id="' + ObjectIDName + '" classid="' + ObjectClassID + '"'
+           + '   width="' + VideoWidth + '" height="' + VideoHeight + '"'
+           + '   codebase="' + ObjectCodebase + '"'
+           + '   standby="' + ObjectStandBy + '"'
+           + '   type="' + ObjectType + '">'
+           + '      <param name="autoStart" value="' + ParamAutoStart + '"/>'
+           + '      <param name="url"       value="' + MediaDirectory + VideoFileName + '" />'
+           + '      <param name="wmode"     value="transparent" />'
+           + '      <param name="uiMode"    value="' + ParamUiMode + '" />'
+           + '      <param name="loop"      value="' + ParamLoop + '" />'               
+           + '      <embed id       ="' + EmbedName + '"'
+           + '          type        ="application/x-mplayer2"'
+           + '          src         ="' + videolink + '"'
+           + '          width       ="' + VideoWidth + '"'
+           + '          height      ="' + VideoHeight + '">'
+           + '      </embed>'
+           + '   </object>'
+           + toc2
+           + '</div>';
+
+      return node;
+   }
+	  </script>
+	                                              
+      <link rel="stylesheet" type="text/css" href="1.1.css" media="screen"/>
+      
+   </head>
+   
+  
+   <body onload="OnLoad();">
+      <div id="csCenter">
+         <div id="mediaArea">
+            <div id="video1">
+               <div id="vidspacefix">&nbsp;</div>
+               <div id="playbutton">
+                  <div id="playtext" align="center">新 概 念 C 语 言  </div>
+               </div>
+               <div id="vidinfo">
+               <p><strong>Lesson 1 What is a simplest C program?</strong></p>
+			   <p>1.1 最简单的C程序</p>
+			   <p>@亚嵌李明老师</p>
+			   <br><br><br><br>
+本小节时间长度: 5分钟11秒  点击开始播放
+               </div>
+            </div>
+         </div>
+   </body>
+</html>
