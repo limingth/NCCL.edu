@@ -27,7 +27,7 @@ window.addEventListener("load", function(evt) {
 
     //auto load 
     play_file("lesson1");
-    PlaySound('1.1.mp3');
+    //PlaySound('1.1.mp3');
 
     var samples = document.querySelectorAll("ul#sample>li>a[id^=\"sample_\"]");
     for (var i = 0; i < samples.length; i++) {
@@ -83,14 +83,11 @@ Speed
 <br>
 <li><a href="1.1.mp3">下载课程 mp3</a></li>
 
-<frame src="http://bellard.org/jslinux/index.html" />
+<audio autoplay controls>	
+	<source src="1.1.mp3" type="audio/mp3" />
+	This browser does not support the audio element.
+</audio>
 
- 
-	<frameset rows="80,*">
-
-    <frame name="top" src="mp3.html"> 
-    <frame name="bottom" src="all.html">
-    </frameset> 
 		
 </body>
 
