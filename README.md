@@ -5,7 +5,7 @@ education website for NCCL
 
 <https://github.com/limingth/NCCL>
 
-* You can find video class online here
+* You can find video class online here  
   
   http://www.duobei.com/course/2535320363
   http://www.duobei.com/course/6512283478
