@@ -4,15 +4,22 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <script type="text/javascript" src="./VT100.js" ></script>
 <script type="text/javascript" src="./scriptreplay.js" ></script>
+<script type ="text/javascript">    
+    function PlaySound(file)
+    {
+		//document.getElementById("mp3").stop();
+        var MUSIC1= document.createElement("embed");
+        MUSIC1.src=file;
+		MUSIC1.width=300;
+		MUSIC1.height=60;
+        document.body.appendChild(MUSIC1);       
+    }
+</script>
 <script type="text/javascript"><!--
 window.addEventListener("load", function(evt) {
     vt = new VT100(80, 24, "term");
     vt.clear();
     vt.refresh();
-    vt.write(
-"\n\n\n" +
-"   欢迎使用hpcasts.com 网页展视系统\n");
-
     document.getElementById("stop").addEventListener("click", stop, false);
     document.getElementById("speed").addEventListener('change', set_speed, false);
     document.getElementById("fontsize").addEventListener('change', set_fontsize, false);
@@ -22,24 +29,20 @@ window.addEventListener("load", function(evt) {
     for (var i = 0; i < samples.length; i++) {
       samples[i].addEventListener('click', function(evt) {
           play_file(evt.target.id.substr(7));
+		  PlaySound('1.1.mp3');
       }, false);
     }
     }, false);
 	
 --></script>
-
-	document.getElementById("mp3").play();
-	
 </head>
 
 <body>
-
-
-<legend>lesson1</legend>
+<br><br>  
+<legend>网页script方式浏览</legend>
 <ul id="sample">
-<li><a href="javascript:void()" id="sample_lesson1">第一课、播放</a></li>
+<li><a href="javascript:void()" id="sample_lesson1">Lesson 1 点击播放</a></li>
 </ul>
-</fieldset>
 
 <tt><pre id=term></pre></tt>
 
